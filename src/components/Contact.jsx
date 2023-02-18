@@ -1,4 +1,5 @@
 import React from 'react';
+import Controls from './Controls';
 
 class Contact extends React.Component {
 
@@ -40,10 +41,11 @@ class Contact extends React.Component {
                 <span className='Contact_status'>
                     Contact status: {this.state.isOnline ? 'ONLINE' : 'OFFLINE'}
                 </span>
-                <div className='Online__Controller'>
-                    <button type='button' onClick={this.handleOnline}>Go online</button>
-                    <button type='button' onClick={this.handleOffline}>Go offline</button>
-                </div>
+                
+                <Controls 
+                    handleOnline={this.handleOnline}
+                    handleOffline={this.handleOffline}
+                />
             </div>
         )
     }
